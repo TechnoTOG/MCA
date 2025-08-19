@@ -15,9 +15,21 @@ void insertionSortDesc(int arr[], int size) {
 }
 
 void main() {
-  int size = 10, arr[] = {12, 150, 260, 45, 80, 15, 1, 100, 88, 16};
+  int size;
+  
+  printf("Enter the size of the array: ");
+  scanf("%d", &size);
+
+  int arr[size];
+
+  for(int i = 0; i < size; i++) {
+    printf("Enter the value for the position %d: ", i+1);
+    scanf("%d", &arr[i]);
+  }
+
   insertionSortDesc(arr, size);
-  printf("The sorted array in descending order is: ");
+
+  printf("The sorted array is: ");
   for(int i = 0; i < size; i++) {
     printf("%d ", arr[i]);
   }

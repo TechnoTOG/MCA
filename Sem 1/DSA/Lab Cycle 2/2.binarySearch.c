@@ -15,15 +15,26 @@ int binarySearch(char arr[], int size, char target) {
 }
 
 void main() {
-  int size = 10, result;
+int size, target, result;
 
-  char target = 'e';
-  char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+  printf("Enter the size of array: ");
+  scanf("%d", &size);
+
+  int arr[size];
+
+  for(int i = 0; i < size; i++) {
+    printf("Enter the value at position %d: ", i+1);
+    scanf("%d", &arr[i]);
+  }
+
+  printf("Enter the target value to be found: ");
+  scanf("%d", &target);
+
   result = binarySearch(arr, size, target);
 
   if(result == -1) {
     printf("The target value was not found\n");
   } else {
-    printf("The target was found at position %d\n", result+1);
+    printf("The value was found at position %d\n", result+1);
   }
 }

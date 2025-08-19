@@ -13,10 +13,21 @@ void bubbleSortDesc(int arr[], int size) {
 }
 
 void main() {
-  int size = 10;
-  int arr[] = {180, 15, 30, 45, 60, 75, 90, 105, 120, 135};
-  bubbleSortDesc(arr, size);
-  printf("The sorted array in descending order is: ");
+  int size;
+  
+  printf("Enter the size of the array: ");
+  scanf("%d", &size);
+
+  int arr[size];
+
+  for(int i = 0; i < size; i++) {
+    printf("Enter the value for the position %d: ", i+1);
+    scanf("%d", &arr[i]);
+  }
+
+  optBubbleSort(arr, size);
+
+  printf("The sorted array is: ");
   for(int i = 0; i < size; i++) {
     printf("%d ", arr[i]);
   }

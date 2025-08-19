@@ -9,9 +9,19 @@ int linearSearch(int arr[], int size, int target) {
   return -1;  // Target not found
 }
 void main() {
-  int size = 10, target = 26, result;
+  int size, target, result;
+  printf("Enter the size of the array: ");
+  scanf("%d", &size);
 
-  int arr[] = {3, 8, 2, 23, 78, 90, 1, 26, 45, 12};
+  int arr[size];
+
+  for(int i = 0; i < size; i++) {
+    printf("Enter the value at position %d: ", i+1);
+    scanf("%d", &arr[i]);
+  }
+
+  printf("Enter the target value to be found: ");
+  scanf("%d",&target);
   result = linearSearch(arr, size, target);
 
   if(result == -1) {

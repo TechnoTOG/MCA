@@ -15,7 +15,17 @@ void insertionSort(int arr[], int size) {
 }
 
 void main() {
-  int size = 10, arr[] = {18, 17, 19, 19, 23, 20, 21, 17, 20, 22};
+  int size;
+  
+  printf("Enter the size of the array: ");
+  scanf("%d", &size);
+
+  int arr[size];
+
+  for(int i = 0; i < size; i++) {
+    printf("Enter the value for the position %d: ", i+1);
+    scanf("%d", &arr[i]);
+  }
 
   insertionSort(arr, size);
 
