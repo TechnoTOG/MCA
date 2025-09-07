@@ -19,11 +19,11 @@ void main() {
   printf("Enter the size of the array: ");
   scanf("%d", &size);
 
-  int arr[size];
+  char arr[size];
 
+  printf("Enter %d Values: ", size);
   for(int i = 0; i < size; i++) {
-    printf("Enter the value for the position %d: ", i+1);
-    scanf("%d", &arr[i]);
+    scanf(" %c", &arr[i]);
   }
 
   bubbleSort(arr, size);

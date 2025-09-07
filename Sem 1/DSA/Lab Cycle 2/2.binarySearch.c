@@ -15,20 +15,20 @@ int binarySearch(char arr[], int size, char target) {
 }
 
 void main() {
-int size, target, result;
+int size, result;
 
   printf("Enter the size of array: ");
   scanf("%d", &size);
 
-  int arr[size];
+  char arr[size], target;
 
   for(int i = 0; i < size; i++) {
     printf("Enter the value at position %d: ", i+1);
-    scanf("%d", &arr[i]);
+    scanf(" %c", &arr[i]);
   }
 
   printf("Enter the target value to be found: ");
-  scanf("%d", &target);
+  scanf(" %c", &target);
 
   result = binarySearch(arr, size, target);
 

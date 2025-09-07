@@ -20,12 +20,12 @@ void main() {
 
   int arr[size];
 
+  printf("Enter %d Values: ", size);
   for(int i = 0; i < size; i++) {
-    printf("Enter the value for the position %d: ", i+1);
     scanf("%d", &arr[i]);
   }
 
-  optBubbleSort(arr, size);
+  BubbleSortDesc(arr, size);
 
   printf("The sorted array is: ");
   for(int i = 0; i < size; i++) {
